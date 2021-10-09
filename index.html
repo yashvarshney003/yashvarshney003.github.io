@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <title> Yash Varshney</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .parent {
+      margin-top: 0%;
+      height: 1000px;
+      width: 100%;
+    }
+
+    body {
+
+      background-image: linear-gradient(to right, rgb(182, 12, 63), rgb(19, 19, 2));
+    }
+
+    .child:hover {
+      background-color: rgb(241, 237, 240);
+      box-shadow: 15px 20px rgba(1, 19, 8, 0.2),
+        40px 600px rgba(167, 167, 9, 0.2);
+    }
+
+    .child:hover p {
+      color: darkgreen;
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 40px;
+      letter-spacing: 5px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff;
+      }
+
+      to {
+        text-shadow: 0 0 80px #8b4dff;
+      }
+    }
+
+    .child {
+      box-shadow: 5px 10px;
+
+      width: 25%;
+      max-width: 250px;
+      height: 200px;
+      max-height: 400px;
+      border-radius: 10px;
+      perspective: 1000px;
+      background-color: #2c2e2d;
+      margin-top: 20px;
+      margin-left: 40px;
+      display: inline-block;
+    }
+
+    p {
+      color: rgb(235, 232, 234);
+      text-align: center;
+      margin: auto;
+      padding-top: 50px;
+
+    }
+
+    @media(max-width:550px) {
+      .child {
+        display: block;
+        margin: auto;
+
+        min-width: 200px;
+        /* margin:auto; */
+        margin-top: 30px;
+
+        min-height: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="parent">
+      <center>
+        <div class="child ">
+          <p>Yash </p>
+          <!-- <h2>Yash Varshney</h2>	 -->
+        </div>
+        <div class="child">
+          <p>Yash </p>
+        </div>
+        <div class="child ">
+          <p>Yash </p>
+        </div>
+      </center>
+
+    </div>
+
+  </section>
+
+</body>
+
+</html>
