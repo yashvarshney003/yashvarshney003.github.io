@@ -8,31 +8,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     .parent {
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap :wrap;
       margin-top: 0%;
-      height: 1000px;
+      height:800px;
       width: 100%;
+     
     }
 
+
+   .card:hover .child{
+  transform: rotateY(180deg);
+  background-color: white;
+}
+
     body {
+       box-sizing: border-box;
 
       background-image: linear-gradient(to right, rgb(182, 12, 63), rgb(19, 19, 2));
     }
 
-    .child:hover {
+     .child:hover {
       background-color: rgb(241, 237, 240);
-      box-shadow: 15px 20px rgba(1, 19, 8, 0.2),
-        40px 600px rgba(167, 167, 9, 0.2);
-    }
+      box-shadow: 15px 20px rgba(1, 19, 8, 0.2);
+        /* 40px 600px rgba(167, 167, 9, 0.2); */
+    } 
 
     .child:hover p {
       color: darkgreen;
     }
 
     p {
-      margin-top: 5px;
-      font-size: 40px;
+     
+      font-size: 20px;
       letter-spacing: 5px;
       animation: glow 2s ease-in-out infinite alternate;
+    }
+    .heading {
+      font-size:40px;
+      margin-top: 5px;
     }
 
     @keyframes glow {
@@ -44,20 +59,40 @@
         text-shadow: 0 0 80px #8b4dff;
       }
     }
+    .card { 
+       box-sizing: border-box;
+      width: 25%;
+      min-width: 350px;
+      height: 300px;
+      max-height: 400px;
+      margin-top: 20px;
+      margin-left: 40px;
+      display: inline-block;
 
-    .child {
+    }
+    .img1  {
+      height: 100%;
+      width:100%
+    }
+
+    .card .child {
+      
       box-shadow: 5px 10px;
 
       width: 25%;
-       max-width: 350px;
+      min-width: 350px;
       height: 300px;
       max-height: 400px;
       border-radius: 10px;
-      perspective: 1000px;
+      text-align: center;
+
       background-color: #2c2e2d;
       margin-top: 20px;
       margin-left: 40px;
       display: inline-block;
+      transition: transform 1s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
 
     p {
@@ -67,19 +102,41 @@
       padding-top: 50px;
 
     }
+    @media(max-width:800px) {
+    .parent  {
+      height: 2000px;
+      overflow: visible;
+    }
+    }
 
     @media(max-width:550px) {
-      .child {
+    
+      .child .card {
         display: block;
-        margin: auto;
+        margin-left:30px;
 
-        min-width: 200px;
+        min-width: 300px;
         /* margin:auto; */
         margin-top: 30px;
 
-        min-height: 70px;
+        min-height: 300px;
       }
+      
     }
+    .front, .back {
+  position: absolute;
+  width: 100%;
+  
+ 
+  backface-visibility: hidden;
+}
+      
+      .back {
+        height:100%;
+        width:100%;
+  
+  transform: rotateY(180deg);
+}
   </style>
 </head>
 
@@ -87,16 +144,93 @@
   <section>
     <div class="parent">
       <center>
+        <div class="card">
+        <div class="child">
+              <div class="front">
+                <p class="heading">Picture </p>
+              </div>
+              <div class = "back">
+                    <img class= "img1" src= "Images/10.jpg">
+              </div>
+            </div>
+          </div>
+          <!-- <h2>Yash Varshney</h2>	 -->
+      
+      
+          <div class="card">
+        <div class="child">
+          <div class="front">
+            <p  class="heading" >About me  </p>
+          </div>
+          <div class="back">
+            <p> I am 2021 BSc(Hons) Electronics graduate from University of Delhi</p>
+          </div>
+        </div>
+        </div>
+
+
+
+
+        <div class="card">
         <div class="child ">
-          <p>Yash </p>
+          <div class="front">
+            <p  class="heading" >Skills</p>
+          </div>
+          <div class="back">
+            <li>
+              
+            </li>
+            
+            
+            <!-- <img class="img1" src="Images/10.jpg"> -->
+          </div>
+        </div>
+        </div>
+
+
+
+
+
+
+        <div class="card">
+        <div class="child ">
+        <div class="front">
+          <p  class="heading">Projects </p>
+        </div>
+        <div class="back">
+          <img class="img1" src="Images/10.jpg">
+        </div>
           <!-- <h2>Yash Varshney</h2>	 -->
         </div>
+        </div>
+
+
+
+
+        <div class="card">
         <div class="child">
-          <p>Yash </p>
+          <div class="front">
+            <p  class="heading">Experience </p>
+          </div>
+          <div class="back">
+            <img class="img1" src="Images/10.jpg">
+          </div>
+          
         </div>
-        <div class="child ">
-          <p>Yash </p>
         </div>
+
+
+
+        
+          <div class="card">
+            <div class="child ">
+              
+              <div class="front">
+                 <p>Education</p>
+              </div>
+             
+          </div>
+          </div>
       </center>
 
     </div>
