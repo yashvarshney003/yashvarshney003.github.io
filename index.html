@@ -1,242 +1,245 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Yash Varshney</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-
-
-  <title> Yash Varshney</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .parent {
-      box-sizing: border-box;
-      display: flex;
-      flex-wrap :wrap;
-      margin-top: 0%;
-      height:800px;
-      width: 100%;
-     
-    }
-
-
-   .card:hover .child{
-  transform: rotateY(180deg);
-  background-color: white;
-}
-
-    body {
-       box-sizing: border-box;
-
-      background-image: linear-gradient(to right, rgb(182, 12, 63), rgb(19, 19, 2));
-    }
-
-     .child:hover {
-      background-color: rgb(241, 237, 240);
-      box-shadow: 15px 20px rgba(1, 19, 8, 0.2);
-        /* 40px 600px rgba(167, 167, 9, 0.2); */
-    } 
-
-    .child:hover p {
-      color: darkgreen;
-    }
-
-    p {
-     
-      font-size: 20px;
-      letter-spacing: 5px;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-    .heading {
-      font-size:40px;
-      margin-top: 5px;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #fff;
-      }
-
-      to {
-        text-shadow: 0 0 80px #8b4dff;
-      }
-    }
-    .card { 
-       box-sizing: border-box;
-      width: 25%;
-      min-width: 350px;
-      height: 300px;
-      max-height: 400px;
-      margin-top: 20px;
-      margin-left: 40px;
-      display: inline-block;
-
-    }
-    .img1  {
-      height: 100%;
-      width:100%
-    }
-
-    .card .child {
-      
-      box-shadow: 5px 10px;
-
-      width: 25%;
-      min-width: 350px;
-      height: 300px;
-      max-height: 400px;
-      border-radius: 10px;
-      text-align: center;
-
-      background-color: #2c2e2d;
-      margin-top: 20px;
-      margin-left: 40px;
-      display: inline-block;
-      transition: transform 1s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    }
-
-    p {
-      color: rgb(235, 232, 234);
-      text-align: center;
-      margin: auto;
-      padding-top: 50px;
-
-    }
-    @media(max-width:800px) {
-    .parent  {
-      height: 2000px;
-      overflow: visible;
-    }
-    }
-
-    @media(max-width:550px) {
-    
-      .child .card {
-        display: block;
-        margin-left:30px;
-
-        min-width: 300px;
-        /* margin:auto; */
-        margin-top: 30px;
-
-        min-height: 300px;
-      }
-      
-    }
-    .front, .back {
-  position: absolute;
-  width: 100%;
-  
- 
-  backface-visibility: hidden;
-}
-      
-      .back {
-        height:100%;
-        width:100%;
-  
-  transform: rotateY(180deg);
-}
-  </style>
-</head>
-
-<body>
-  <section>
-    <div class="parent">
-      <center>
+  <body>
+    <section id="firstpage">
+      <div class="parent">
         <div class="card">
-        <div class="child">
-              <div class="front">
-                <p class="heading">Picture </p>
-              </div>
-              <div class = "back">
-                    <img class= "img1" src= "Images/10.jpg">
+          <div class="child">
+            <div class="back">
+              <img class="img1" src="Images/10.jpg" />
+            </div>
+            <div class="front">
+              <p class="heading">DP</p>
+            </div>
+          </div>
+        </div>
+        <!-- <h2>Yash Varshney</h2>	 -->
+
+        <div class="card">
+          <div class="child">
+            <div class="front">
+              <p class="heading">About me</p>
+            </div>
+            <div class="back">
+              <p>
+                Hi, I am Yash Varshney. Currently I am a software developer at
+                Zeeve Deep Tech. Currently I live in Faridabad, India. I have
+                good interest in Web development, Embedded Electronics and
+                Computer Vision(ML).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="child">
+            <div class="front">
+              <p class="heading">Skills</p>
+            </div>
+            <div class="back">
+              <p id="skills">
+                Python <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star fa-star-half-full"></span> <br />
+                JavaScript <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <br />
+                Java <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span><br />
+                C++<span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star fa-star-half-full"></span>
+                <span class="fa fa-star"></span>
+              </p>
+
+              <!-- <img class="img1" src="Images/10.jpg"> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="child">
+            <div class="front">
+              <p class="heading">Contect Me</p>
+            </div>
+            <div class="back projects">
+              <a href="#contactMe">
+                Move to section for better understanding
+              </a>
+            </div>
+            <!-- <h2>Yash Varshney</h2>	 -->
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="child">
+            <div class="front">
+              <p class="heading">Experience</p>
+            </div>
+            <div class="back">
+              <div id="experience">
+                <a href="#Experience">Zeeve Deep Tech(Software Developer)</a>
+
+                <br />
+                <br />
+                <a href="#Experience"> Edyst(Software Intern)</a>
+
+                <br />
+                <br />
+                <a href="#Experience"> Student Researcher</a>
               </div>
             </div>
           </div>
-          <!-- <h2>Yash Varshney</h2>	 -->
-      
-      
-          <div class="card">
-        <div class="child">
-          <div class="front">
-            <p  class="heading" >About me  </p>
-          </div>
-          <div class="back">
-            <p> I am 2021 BSc(Hons) Electronics graduate from University of Delhi</p>
-          </div>
         </div>
-        </div>
-
-
-
 
         <div class="card">
-        <div class="child ">
-          <div class="front">
-            <p  class="heading" >Skills</p>
+          <div class="child">
+            <div class="front">
+              <p class="heading">Frameworks/<br />Libraries</p>
+            </div>
+            <div class="back">
+              <p id="skills">
+                Django
+                <br />
+                NodeJs
+                <br />
+                Flask
+                <br />
+                OpenCV
+                <br />
+              </p>
+            </div>
           </div>
-          <div class="back">
-            <li>
-              
-            </li>
-            
-            
-            <!-- <img class="img1" src="Images/10.jpg"> -->
+        </div>
+      </div>
+    </section>
+    <section id="Experience">
+      <div class="parent1">
+        <div class="card1">
+          <div class="organizationname">
+            <h1>Zeeve</h1>
+          </div>
+          <div class="work">
+            <p style="margin-bottom: 1.2rem; color: #070c08">
+              This is my first full time job. I have joined in the month of
+              september. Working as a full stack developer. <b>MERN stack</b>
+            </p>
           </div>
         </div>
-        </div>
 
-
-
-
-
-
-        <div class="card">
-        <div class="child ">
-        <div class="front">
-          <p  class="heading">Projects </p>
-        </div>
-        <div class="back">
-          <img class="img1" src="Images/10.jpg">
-        </div>
-          <!-- <h2>Yash Varshney</h2>	 -->
-        </div>
-        </div>
-
-
-
-
-        <div class="card">
-        <div class="child">
-          <div class="front">
-            <p  class="heading">Experience </p>
+        <div class="card1">
+          <div class="organizationname">
+            <h1>Edyst</h1>
           </div>
-          <div class="back">
-            <img class="img1" src="Images/10.jpg">
+
+          <div class="work">
+            <p style="margin-bottom: 1.2rem; color: #070c08">
+              This is the evry first time I have mentored students apart my
+              college Junior.<b>
+                I was responsible for solving the doubts and quries of student
+                related to Python, C and C++ Cohort. The major thing I learnt
+                that solving doubts doesn't mean providing the whole solution.
+                But make student able to find the solution from his own
+                approach.</b
+              >
+            </p>
           </div>
-          
         </div>
+
+        <div class="card1">
+          <div class="organizationname">
+            <h1>ANDC</h1>
+          </div>
+          <div class="work">
+            <p style="margin-bottom: 1.2rem; color: #070c08">
+              During this internship we built the full stack IOT project. The
+              project name is R.T.P.C.S(Real Time Passenger Counting System). We
+              built an API to send and receive the data from Hardware. We built
+              our electronics system to count person using LASER and LDR sensor
+              and used Arduino to manipulation and sending the data to NodeMCU
+              8266. Then NodeMCU will hit the api to update the data on server.
+              Built an algorithm to count the number of person current present
+              in the system.
+            </p>
+          </div>
         </div>
-
-
-
-        
-          <div class="card">
-            <div class="child ">
-              
-              <div class="front">
-                 <p>Education</p>
-              </div>
-             
-          </div>
-          </div>
-      </center>
-
-    </div>
-
-  </section>
-
-</body>
-
+      </div>
+    </section>
+    <section id="contactMe">
+      <div class="online">
+        <div id="online-websites">
+          <i class="fab fa-hackerrank"></i>
+          <a
+            style="color: rgb(95, 9, 9)"
+            href="https://www.hackerrank.com/yash_varshney003"
+          >
+            Hackerrank
+          </a>
+          <br />
+          <img
+            style="width: 2rem; height: 3rem"
+            src="	https://cdnjs.cloudflare.com/ajax/libs/simple-icons/3.2.0/codechef.svg"
+          />
+          <a
+            style="color: rgb(95, 9, 9)"
+            href="https://www.codechef.com/users/varshney3"
+          >
+            Codechef
+          </a>
+          <br />
+          <i class="fab fa-github"></i>
+          <a
+            style="color: rgb(95, 9, 9)"
+            href="https://github.com/yashvarshney003"
+          >
+            Github
+          </a>
+          <br />
+          <i class="fab fa-linkedin-in"></i>
+          <a
+            style="color: rgb(95, 9, 9)"
+            href="https://www.linkedin.com/in/yash-varshney-/"
+          >
+            LinkedIn
+          </a>
+        </div>
+        <div id="online-websites">
+          <button>
+            <a href="YASHVARSHNEY.pdf" download="Yash Varshney Resume">
+              Download Resume
+            </a>
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
